@@ -12,14 +12,16 @@ This is main CSS file that contains custom style rules used in this template
 /** Base Styles
 --------------------------------------------------------------*/
 :root {
-  --accent-color: #94CA21;
+  --accent-color: #eab01c;
+  --navaccent-color: #908983;
   --secondary-color: #79A6DE;
-  --dark-color: #222222;
+  --dark-color: #000000;
   --white-color: #FFFFFF;
   --body-text-color: #414141;
+  --nav-text-color: #ca7821;
   --light-text-color: #686868;
   --link-color: #94CA21;
-  --background-color: #F9F9F9;
+  --background-color: #ffffff;
 }
 
 /* Fonts */
@@ -36,7 +38,7 @@ This is main CSS file that contains custom style rules used in this template
 #rental {
   position: relative; /* Ensure the rental section remains in the document flow */
   top: -100px; /* Adjust this value as needed to achieve desired overlap */
-  background-color: #f9f9f9; /* Add a background color for better visibility */
+  background-color: #ffffff; /* Add a background color for better visibility */
 }
 
 
@@ -53,6 +55,10 @@ This is main CSS file that contains custom style rules used in this template
 html {
   box-sizing: border-box;
 }
+.navbar-brand .logo { 
+  max-width: 150px; /* Adjust the maximum width as needed */
+  max-height: 150px; /* Adjust the maximum height as needed */
+}
 
 /** Typography
     --------------------------------------------------------------*/
@@ -66,14 +72,24 @@ body {
 }
 
 h1,
-.h1,
+.h1{
+  font-family: var(--heading-font);
+  font-weight: 700;
+  color: var(--dark-color);
+
+}
 h2,
-.h2,
+.h2{
+  font-family: var(--heading-font);
+  font-weight: 700;
+  color: var(--dark-color);
+
+}
 h3,
 .h3 {
   font-family: var(--heading-font);
   font-weight: 700;
-  color: var(--dark-color);
+  color: var(--white-color);
 
 }
 
@@ -177,7 +193,11 @@ a:hover {
 
 }
 
-
+.pattern-overlay {
+  background-size: cover;
+  background-blend-mode: multiply; /* Or other blending modes: overlay, screen, etc. */
+  background-color: rgba(255, 0, 0, 0.5); /* Example: semi-transparent red overlay */
+}
 /* bootstrap button override  
 --------------------------------------------------------------*/
 .btn {
@@ -247,7 +267,7 @@ nav.navbar {
 
 a.nav-link,
 .nav-button {
-  color: var(--body-text-color);
+  color: var(--nav-text-color);
   font-size: 1rem;
   font-family: var(--body-font);
   letter-spacing: 0.02em;
@@ -261,15 +281,17 @@ a.nav-link::after {
   width: 0;
   height: 2px;
   background: var(--accent-color);
-  transition: width 0.3s;
+  transition: width 0.3s, background 0.3s; /* Include background in the transition */
 }
+
 
 a.nav-link.active::after,
 a.nav-link:focus::after,
 a.nav-link:hover::after {
   width: 100%;
-  transition: width 0.3s;
+  background: var(--accent-color); /* Change the background color to grey */
 }
+
 
 
 /* dropdown */
@@ -583,6 +605,9 @@ section#action {
   flex-wrap: wrap;
 }
 
+#footer {
+  background-color: rgb(255, 255, 255);
+}
 
 /*--------------------------------------------------------------
 Blog Page style start

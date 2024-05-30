@@ -54,10 +54,16 @@ This is main CSS file that contains custom style rules used in this template
 
 html {
   box-sizing: border-box;
+   /* font-size: 62.5%; */
 }
-.navbar-brand .logo { 
-  max-width: 150px; /* Adjust the maximum width as needed */
-  max-height: 150px; /* Adjust the maximum height as needed */
+.navbar-brand .logo1 { 
+  max-width: 100px; /* Adjust the maximum width as needed */
+  max-height: 100px; /* Adjust the maximum height as needed */
+}
+
+.navbar-brand .logo2 { 
+  max-width: 200px; /* Adjust the maximum width as needed */
+  max-height: 200px; /* Adjust the maximum height as needed */
 }
 
 /** Typography
@@ -261,7 +267,7 @@ Index page style start
 /*---- navigation section style start ----*/
 
 nav.navbar {
-  background: var(--white-color);
+  background: #d6d6d6;
   z-index: 9999999;
 }
 
@@ -323,7 +329,10 @@ a.nav-link:hover::after {
 section#hero {
   background: var(--background-color);
 }
-
+.bg{
+  background-image: url('images.jpeg');
+  
+}
 .hero-content {
   padding: 200px 0px;
 }
@@ -416,8 +425,32 @@ img.card-img-top {
   }
 }
 
+.all{
+  text-align: center;
+}
+.workshop{
+  text-align: center;
+  font-size: large;
+}
 
+.serv{
+  text-align: center;
 
+}
+.button{
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.button2{
+  font-size: 2rem;
+  padding:2rem 2rem 2rem 2rem;
+  border-radius: 5%;
+}
+
+.colum{
+  padding-bottom: 50px;
+}
 /* swiper overide 
 --------------------------------------------------------------*/
 .swiper-horizontal>.swiper-pagination-bullets,

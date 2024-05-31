@@ -329,10 +329,7 @@ a.nav-link:hover::after {
 section#hero {
   background: var(--background-color);
 }
-.bg{
-  background-image: url('images.jpeg');
-  
-}
+
 .hero-content {
   padding: 200px 0px;
 }

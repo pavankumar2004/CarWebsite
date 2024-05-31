@@ -364,8 +364,16 @@ section#hero {
 
 
 
+/*location*/
+.location{
+  margin-top: 30px;
+  padding-left: 20px;
+  
+}
 
-
+.loc{
+  border-radius: 20px;
+}
 
 
 /*---- rental section style start ----*/

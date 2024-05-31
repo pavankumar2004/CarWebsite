@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title></title>
+
+        <!--vendor css ================================================== -->
+        <link rel="stylesheet" type="text/css" href="css/vendor.css">
+
+        <!-- Link Swiper's CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+        <!--Bootstrap ================================================== -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+
+        <!-- Style Sheet ================================================== -->
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+        <!-- Google Fonts ================================================== -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@700&family=Raleway:wght@400;700&display=swap"
+            rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+
+        <!-- script ================================================== -->
+        <script src="js/modernizr.js"></script>
+
+    </head>
+
+    <body data-bs-spy="scroll" data-bs-target="#header-nav" tabindex="0">
+
+
+        <nav class="navbar navbar-expand-lg navbar-light container-fluid py-3 position-fixed">
+            <div class="container d-flex justify-content-between align-items-center">
+                <a class="navbar-brand" href="index.html"><img class="logo1" src="logo.png" alt="Logo"></a>
+
+                <a class="navbar-brand" href="index.html"><img class="logo2" src="MARIN_MOTOR_TITRE.png" alt="Title"></a>
+                <div class="d-flex flex-column align-items-center mx-3">
+                    <div class="d-flex align-items-center">
+                        <iconify-icon icon="mdi:phone" class="me-2"></iconify-icon>
+                        <span>+32 123 456 789</span>
+                    </div>
+                    <div class="d-flex align-items-center mt-2">
+                        <iconify-icon icon="mdi:email" class="me-2"></iconify-icon>
+                        <span>info@example.com</span>
+                    </div>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Fermer"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav align-items-center justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active px-3" aria-current="page" href="index.html">Accueil</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link px-3" href="#pricing">Nos Véhicules</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link px-3" href="#services">Atelier</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link px-3" href="contact.html">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Include Iconify script -->
+        <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
+        <!-- hero section start  -->
+        <section id="hero" class="position-relative overflow-hidden" style="background-image: url('images/img2.png');background-size:cover;">
+            <div class="bg">
+                <div class="hero-content container text-center">
+                    <div class="row" >
+                        <div class="detail mb-4">
+                            <h1 style="padding-top:70px;"><span class="text-primary">Contact</span></h1>
+                            <p class="hero-paragraph" style="color: white !important;"> MARIN MOTOR votre garage par excellence</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="location">
+            <div class="colum container-fluid px-0">
+                <div class="row g-0">
+      <!-- Second column -->
+                    <div class="col-lg-6" style="padding-top: 10%; padding-left:10%" >
+                        <div class="d-flex align-items-center mt-3 mb-3">
+                            <iconify-icon class="me-2" icon="mdi:map-marker"></iconify-icon>
+                            <span style="font-size: 120%;">Av. Joseph Lejeune 182, 4980 Trois-Ponts</span>
+                        </div>
+                        <div class="d-flex align-items-center mb-3">
+                            <iconify-icon class="me-2" icon="mdi:phone"></iconify-icon>
+                            <span style="font-size: 120%;">080 55 00 80<br>
+                                marin.motor17@gmail.com
+                                 </span>
+                        </div>
+                        <div class="d-flex align-items-center mb-3">
+                            <iconify-icon class="me-2" icon="mdi:clock"></iconify-icon>
+                            <span style="font-size: 120%;">Lun-Ven : 8.00 - 17:30 <br>Samedi : sur rendez-vous
+                              <br>  Dimanche : fermé</span>
+                        </div>
+                    </div>
+      <!-- Second column -->
+                    <div class="col-lg-6 ">
+                        <iframe class= 'loc' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d35433.53825875818!2d5.885717087167266!3d50.36988551500956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c06f8b208935bd%3A0x84917d92ffd24de0!2sVal%20de%20Wanne%20%7C%20Centre%20de%20Loisirs!5e0!3m2!1sen!2sin!4v1717139771028!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>    
+                </div>
+            </div>
+             </section>
+
+        <section class="people">
+            <h1 style="text-align: center;">Notre<span class="text-primary"> equipe</span></h1>
+            <div class="colum container-fluid px-0">
+                <div class="row g-0">
+      <!-- First column -->
+                    <div class="col-lg-4">
+                     <div style="text-align: center;">  <img src='./images/team1.jpg' style="margin-bottom: 50px; width:20rem;height:auto; margin: 30px;border-radius: 20px;"> </div>
+                        <p style="text-align: center;"><span class="text-primary" style="font-size:xx-large;"> Joe Mama</p>   
+                    </div>
+      <!-- First column -->
+      <!-- Second column -->
+                    <div class="col-lg-4"  >
+                        <div style="text-align: center;">   <img src="images/team2.jpg" alt=""  style="margin-bottom: 50px; width:20rem;height:auto; margin: 30px;border-radius: 20px;"> </div>
+                        <p style="text-align: center;"><span class="text-primary" style="font-size:xx-large;"> Crossiant</p>   
+                    </div>
+      <!-- Second column -->
+                    <div class="col-lg-4"  >
+                        <div style="text-align: center;"> <img src="images/team4.jpg" alt=""  style="margin-bottom: 50px; width: 20rem;height:auto; margin: 30px;border-radius: 20px;"> </div>
+                        <p style="text-align: center;"><span class="text-primary" style="font-size:xx-large;"> Puffs</p>   
+                    </div>    
+                        </div>
+            </div>
+            <div class="colum container-fluid px-0">
+                <div class="row g-0">
+      <!-- Second column -->
+                    <div class="col-lg-6"  >
+                        <div style="text-align: center;"> <img src="images/team2.jpg" alt=""  style="margin-bottom: 50px; width:20rem;height:auto; margin: 30px;border-radius: 20px;"> 
+                        <p style="text-align: center;"><span class="text-primary" style="font-size:xx-large;"> Carl Johnson</p>   </div>
+                    </div>
+      <!-- Second column -->
+                    <div class="col-lg-6" >
+                        <div style="text-align: center;"> <img src="images/team4.jpg" alt=""  style="margin-bottom: 50px; width:20rem;height:auto; margin: 30px;border-radius: 20px;"> 
+                        <p style="text-align: center;"><span class="text-primary" style="font-size:xx-large;"> Big Smoke</p>   </div>
+                    </div>    
+                        </div>
+            </div>
+        </section>
+        <!-- Footer Section Starts -->
+        <section id="footer">
+            <div class="container footer-container mt-5">
+                <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 my-5 py-5">
+                    <div class="col-md-4 mt-5 mt-md-0">
+                        <a class="navbar-brand" href="index.html"><img class="logo" src="logo.png"></a>
+                
+                        <div class="d-flex align-items-center mt-3 mb-3">
+                            <iconify-icon class="me-2" icon="mdi:map-marker"></iconify-icon>
+                            <span>Av. Joseph Lejeune 182, 4980 Trois-Ponts</span>
+                        </div>
+                        <div class="d-flex align-items-center mb-3">
+                            <iconify-icon class="me-2" icon="mdi:phone"></iconify-icon>
+                            <span>080 55 00 80<br>
+                                marin.motor17@gmail.com
+                                 </span>
+                        </div>
+                        <div class="d-flex align-items-center mb-3">
+                            <iconify-icon class="me-2" icon="mdi:clock"></iconify-icon>
+                            <span>Lun-Ven : 8.00 - 17:30 <br>Samedi : sur rendez-vous
+                              <br>  Dimanche : fermé</span>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <a href="#" target="_blank"><iconify-icon class="social-link-icon pe-4" icon="mdi:facebook"></iconify-icon></a>
+                            <a href="#" target="_blank"><iconify-icon class="social-link-icon pe-4" icon="mdi:twitter"></iconify-icon></a>
+                            <a href="#" target="_blank"><iconify-icon class="social-link-icon pe-4" icon="mdi:instagram"></iconify-icon></a>
+                            <a href="#" target="_blank"><iconify-icon class="social-link-icon pe-4" icon="mdi:linkedin"></iconify-icon></a>
+                            <a href="#" target="_blank"><iconify-icon class="social-link-icon pe-4" icon="mdi:youtube"></iconify-icon></a>
+                        </div>
+                    </div>
+                    <div class="col-md-7 offset-md-1 mt-5">
+                        <ul class="footer-nav list-unstyled">
+                            <li class="nav-item me-2 mb-3">
+                                <a class="nav-link px-4" aria-current="page" href="#">Accueil</a>
+                            </li>
+                            <li class="nav-item me-2 mb-3">
+                                <a class="nav-link px-4" href="#">Réservation</a>
+                            </li>
+                            <li class="nav-item me-2 mb-3">
+                                <a class="nav-link px-4" href="#">À propos</a>
+                            </li>
+                            <li class="nav-item me-2 mb-3">
+                                <a class="nav-link px-4" href="#">Voitures</a>
+                            </li>
+                            <li class="nav-item me-2 mb-3">
+                                <a class="nav-link px-4" href="#">Services</a>
+                            </li>
+                            <li class="nav-item me-2 mb-3">
+                                <a class="nav-link px-4" href="#">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </footer>
+            </div>
+            <footer class="d-flex flex-wrap justify-content-between align-items-center border-top"></footer>
+            <div class="container">
+                <footer class="d-flex flex-wrap justify-content-between align-items-center py-2 pt-4">
+                    <div class="col-md-6 d-flex align-items-center">
+                        <p>© 2024 MarinMotor - Tous droits réservés</p>
+                    </div>
+                </footer>
+            </div>
+        </section>
+        
+        <!-- Include Iconify script -->
+        <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
+        
+        
+
+
+
+
+        <!-- script ================================================== -->
+        <script src="js/jquery-1.11.0.min.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+            crossorigin="anonymous"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
+
+    </body>
+
+    </html>
+
+        

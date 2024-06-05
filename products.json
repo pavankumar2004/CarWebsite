@@ -1,0 +1,50 @@
+[
+	{
+		"image": "images/car1.png",
+		"title": "Product title",
+		"Engine": "95cc",
+		"GearShift": "Automatique",
+		"description": "Lorem ipsum dolor sit amet consectetur adipisicing, elit. Blanditiis, ducimus.",
+		"price": "9,99"
+	},
+	{
+		"image": "images/car1.png",
+		"title": "Product title",
+		"Engine": "95cc",
+		"GearShift": "Automatique",
+		"description": "Lorem ipsum dolor sit amet consectetur adipisicing, elit. Blanditiis, ducimus.",
+		"price": "9,99"
+	},
+	{
+		"image": "images/car1.png",
+		"title": "Product title",
+		"Engine": "95cc",
+		"GearShift": "Automatique",
+		"description": "Lorem ipsum dolor sit amet consectetur adipisicing, elit. Blanditiis, ducimus.",
+		"price": "9,99"
+	},
+	{
+		"image": "images/car1.png",
+		"title": "Product title",
+		"Engine": "95cc",
+		"GearShift": "Automatique",
+		"description": "Lorem ipsum dolor sit amet consectetur adipisicing, elit. Blanditiis, ducimus.",
+		"price": "9,99"
+	},
+	{
+		"image": "images/car1.png",
+		"title": "Product title",
+		"Engine": "95cc",
+		"GearShift": "Automatique",
+		"description": "Lorem ipsum dolor sit amet consectetur adipisicing, elit. Blanditiis, ducimus.",
+		"price": "9,99"
+	},
+	{
+		"image": "images/car1.png",
+		"title": "Product title",
+		"Engine": "95cc",
+		"GearShift": "Automatique",
+		"description": "Lorem ipsum dolor sit amet consectetur adipisicing, elit. Blanditiis, ducimus.",
+		"price": "9,99"
+	}
+]

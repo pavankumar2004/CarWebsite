@@ -33,9 +33,9 @@ http.onload = function(){
 			output += `
 				<div class="product">
 					<img style="border-radius: 15px;" src="${item.image}" alt="${item.description}">
-					<p ><span class="text-primary">${item.title}</span></p>
+					<p style="margin-top:10px"><span class="text-primary" >${item.title}</span></p>
 					<p>${item.Engine} ${item.GearShift}</p>
-					<p><span class="text-primary">${item.price}&euro;</span><span><button type="button" style="border-radius:15px;" class="btn btn-dark">Details</button></p>
+					<p><span class="text-primary" style="margin-right:20px">${item.price}&euro;</span><span><button type="button" style="border-radius:15px;" class="btn btn-dark">Details</button></p>
  					
 				</div>
 			`;

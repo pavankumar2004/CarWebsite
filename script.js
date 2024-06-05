@@ -16,7 +16,7 @@ http.open('get', 'products.json', true);
 http.send();
 
 // Now i have to catch the response.
-// i will check the onload eventlistener.
+// i will check the onload eventlistener
 http.onload = function(){
 	// Inside the function i need to check the readystate and status properties.
 	if(this.readyState == 4 && this.status == 200){

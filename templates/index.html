@@ -1,0 +1,590 @@
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title></title>
+
+        <!--vendor css ================================================== -->
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/vendor.css') }}">
+
+        <!-- Link Swiper's CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+        <!--Bootstrap ================================================== -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+
+        <!-- Style Sheet ================================================== -->
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+
+        <!-- Google Fonts ================================================== -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@700&family=Raleway:wght@400;700&display=swap"
+            rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+
+        <!-- script ================================================== -->
+        <script src="{{ url_for('static', filename='js/modernizr.js') }}"></script>
+
+    </head>
+
+    <body data-bs-spy="scroll" data-bs-target="#header-nav" tabindex="0">
+
+
+        <nav class="navbar navbar-expand-lg navbar-light container-fluid py-3 position-fixed">
+            <div class="container d-flex justify-content-between align-items-center">
+                <a class="navbar-brand" href="{{ url_for('index') }}"><img class="logo1" src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo"></a>
+
+                <a class="navbar-brand" href="{{ url_for('index') }}"><img class="logo2" src="{{ url_for('static', filename='images/MARIN_MOTOR_TITRE.png') }}" alt="Title"></a>
+                <div class="d-flex flex-column align-items-center mx-3">
+                    <div class="d-flex align-items-center">
+                        <iconify-icon icon="mdi:phone" class="me-2"></iconify-icon>
+                        <span>+32 123 456 789</span>
+                    </div>
+                    <div class="d-flex align-items-center mt-2">
+                        <iconify-icon icon="mdi:email" class="me-2"></iconify-icon>
+                        <span>info@example.com</span>
+                    </div>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Fermer"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav align-items-center justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active px-3" aria-current="page" href="{{ url_for('index') }}">Accueil</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link px-3" href="{{ url_for('listing') }}">Nos Véhicules</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link px-3" href="#services">Atelier</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link px-3" href="{{ url_for('contact') }}">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Include Iconify script -->
+        <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
+        
+    
+        
+        <!-- hero section start  -->
+        <section id="hero" class="position-relative overflow-hidden" style="background-image: url('images/garage.png');background-size: cover;">
+            <div class="bg">
+                <div class="hero-content container text-center">
+                    <div class="row" >
+                        <div class="detail mb-4">
+                            <h1 style="padding-top:70px;">Trouvez votre <span class="text-primary">voiture</span></h1>
+                            <p class="hero-paragraph" style="color: white !important;"> MARIN MOTOR votre garage par excellence</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+
+       
+        <!-- rental section start  -->
+        <section id="rental" class="position-relative">
+            <div class="container mt-5 pt-5">
+                <h2 class=" text-center my-5">Nos derniers <span class="text-primary"> véhicules </span> </h2>
+
+                <div class="swiper-button-next rental-swiper-next  rental-arrow position-absolute"></div>
+                <div class="swiper-button-prev rental-swiper-prev rental-arrow position-absolute"></div>
+
+                <div class="swiper rental-swiper mb-5">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <a href="car-single.html"><img src="{{ url_for('static', filename='images/car1.png') }}" class="card-img-top" alt="..."></a>
+                                <div class="card-body p-4">
+                                    <a href="car-single.html">
+                                        <h4 class="card-title">BMW x3</h4>
+                                    </a>
+                                    <div class="card-text ">
+                                        <ul class="d-flex list-unstyled">
+                                            <li class="rental-list">
+                                                Sports
+                                            </li>
+                                            <li class="rental-list"> <img src="{{ url_for('static', filename='images/dot.png') }}" class="px-3" alt="image">
+                                            </li>
+                                            <li class="rental-list"> Auto</li>
+                                            <li class="rental-list"> <img src="{{ url_for('static', filename='images/dot.png') }}" class="px-3" alt="image">
+                                            </li>
+                                            <li class="rental-list"> 4 Places </li>
+                                            <li class="rental-list"> <img src="{{ url_for('static', filename='images/dot.png') }}" class="px-3" alt="image">
+                                            </li>
+                                            <li class="rental-list display-small"> Diesel </li>
+                                        </ul>
+                                    </div>
+                                    <hr>
+                                    <div class="d-flex justify-content-between">
+                                        <h3 class="pt-2">$369 <span class="rental-price"></span></h3>
+                                        <a href="car-single.html" class="btn btn-primary">details </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <a href="car-single.html"><img src="{{ url_for('static', filename='images/car2.png') }}" class="card-img-top" alt="..."></a>
+                                <div class="card-body p-4">
+                                    <a href="car-single.html">
+                                        <h4 class="card-title">BMW M2</h4>
+                                    </a>
+                                    <div class="card-text ">
+                                        <ul class="d-flex list-unstyled">
+                                            <li class="rental-list">
+                                                Sports
+                                            </li>
+                                            <li class="rental-list"> <img src="{{ url_for('static', filename='images/dot.png') }}" class="px-3" alt="image">
+                                            </li>
+                                            <li class="rental-list"> Auto</li>
+                                            <li class="rental-list"> <img src="{{ url_for('static', filename='images/dot.png') }}" class="px-3" alt="image">
+                                            </li>
+                                            <li class="rental-list"> 4 Places </li>
+                                            <li class="rental-list"> <img src="{{ url_for('static', filename='images/dot.png') }}" class="px-3" alt="image">
+                                            </li>
+                                            <li class="rental-list display-small"> Diesel </li>
+                                        </ul>
+                                    </div>
+                                    <hr>
+                                    <div class="d-flex justify-content-between">
+                                        <h3 class="pt-2">$369 <span class="rental-price"></span></h3>
+                                        <a href="car-single.html" class="btn btn-primary">details</a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <a href="car-single.html"><img src="{{ url_for('static', filename='images/car3.png') }}" class="card-img-top" alt="..."></a>
+                                <div class="card-body p-4">
+                                    <a href="car-single.html">
+                                        <h4 class="card-title">Ford explorer</h4>
+                                    </a>
+                                    <div class="card-text ">
+                                        <ul class="d-flex list-unstyled">
+                                            <li class="rental-list">
+                                                Sports
+                                            </li>
+                                            <li class="rental-list"> <img src="{{ url_for('static', filename='images/dot.png') }}" class="px-3" alt="image">
+                                            </li>
+                                            <li class="rental-list"> Auto</li>
+                                            <li class="rental-list"> <img src="{{ url_for('static', filename='images/dot.png') }}" class="px-3" alt="image">
+                                            </li>
+                                            <li class="rental-list"> 4 Places </li>
+                                            <li class="rental-list"> <img src="{{ url_for('static', filename='images/dot.png') }}" class="px-3" alt="image">
+                                            </li>
+                                            <li class="rental-list display-small"> Diesel </li>
+                                        </ul>
+                                    </div>
+                                    <hr>
+                                    <div class="d-flex justify-content-between">
+                                        <h3 class="pt-2">$369 <span class="rental-price"></span></h3>
+                                        <a href="car-single.html" class="btn btn-primary">details </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <a href="car-single.html"><img src="{{ url_for('static', filename='images/car1.png') }}" class="card-img-top" alt="..."></a>
+                                <div class="card-body p-4">
+                                    <a href="car-single.html">
+                                        <h4 class="card-title">BMW x3</h4>
+                                    </a>
+                                    <div class="card-text ">
+                                        <ul class="d-flex list-unstyled">
+                                            <li class="rental-list">
+                                                Sports
+                                            </li>
+                                            <li class="rental-list"> <img src="{{ url_for('static', filename='images/dot.png') }}" class="px-3" alt="image">
+                                            </li>
+                                            <li class="rental-list"> Auto</li>
+                                            <li class="rental-list"> <img src="{{ url_for('static', filename='images/dot.png') }}" class="px-3" alt="image">
+                                            </li>
+                                            <li class="rental-list"> 4 Places </li>
+                                            <li class="rental-list"> <img src="{{ url_for('static', filename='images/dot.png') }}" class="px-3" alt="image">
+                                            </li>
+                                            <li class="rental-list display-small"> Diesel </li>
+                                        </ul>
+                                    </div>
+                                    <hr>
+                                    <div class="d-flex justify-content-between">
+                                        <h3 class="pt-2">$369 <span class="rental-price">/day</span></h3>
+                                        <a href="car-single.html" class="btn btn-primary">details </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <a href="car-single.html"><img src="{{ url_for('static', filename='images/car2.png') }}" class="card-img-top" alt="..."></a>
+                                <div class="card-body p-4">
+                                    <a href="car-single.html">
+                                        <h4 class="card-title">BMW M2</h4>
+                                    </a>
+                                    <div class="card-text ">
+                                        <ul class="d-flex list-unstyled">
+                                            <li class="rental-list">
+                                                Sports
+                                            </li>
+                                                <li class="rental-list"> <img src="{{ url_for('static', filename='images/dot.png') }}" class="px-3" alt="image">
+                                                </li>
+                                                <li class="rental-list"> Auto</li>
+                                                <li class="rental-list"> <img src="{{ url_for('static', filename='images/dot.png') }}" class="px-3" alt="image">
+                                                </li>
+                                                <li class="rental-list"> 4 Places </li>
+                                                <li class="rental-list"> <img src="{{ url_for('static', filename='images/dot.png') }}" class="px-3" alt="image">
+                                                </li>
+                                            <li class="rental-list display-small"> Diesel </li>
+                                        </ul>
+                                    </div>
+                                    <hr>
+                                    <div class="d-flex justify-content-between">
+                                        <h3 class="pt-2">$369 <span class="rental-price">/day</span></h3>
+                                        <a href="car-single.html" class="btn btn-primary">details </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <a href="car-single.html"><img src="{{ url_for('static', filename='images/car3.png') }}" class="card-img-top" alt="..."></a>
+                                <div class="card-body p-4">
+                                    <a href="car-single.html">
+                                        <h4 class="card-title">Ford explorer</h4>
+                                    </a>
+                                    <div class="card-text ">
+                                        <ul class="d-flex list-unstyled">
+                                            <li class="rental-list">
+                                                Sports
+                                            </li>
+                                            <li class="rental-list"> <img src="{{ url_for('static', filename='images/dot.png') }}" class="px-3" alt="image">
+                                            </li>
+                                            <li class="rental-list"> Auto</li>
+                                            <li class="rental-list"> <img src="{{ url_for('static', filename='images/dot.png') }}" class="px-3" alt="image">
+                                            </li>
+                                            <li class="rental-list"> 4 Places </li>
+                                            <li class="rental-list"> <img src="{{ url_for('static', filename='images/dot.png') }}" class="px-3" alt="image">
+                                            </li>
+                                            <li class="rental-list display-small"> Diesel </li>
+                                        </ul>
+                                    </div>
+                                    <hr>
+                                    <div class="d-flex justify-content-between">
+                                        <h3 class="pt-2">$369 <span class="rental-price">/day</span></h3>
+                                        <a href="car-single.html" class="btn btn-primary">details </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="all">
+            <a href="#">
+                <button type="button" class="button btn btn-warning">Voir nos autres vehicules</button>
+            </a> 
+            </div>   
+
+        </section>
+        <section id="services">
+            <div class="workshop">
+                <h1>Notre<span class="text-primary"> Atelier</span></h1>
+            </div>
+            <div class="colum container-fluid px-0">
+                <div class="row g-0">
+      <!-- First column -->
+                    <div class="col-lg-6 vh-50">
+                        <p style="padding: 30px;">Notre priorité est le service, grâce à une équipe dynamique et motivée, nous avons obtenu plusieurs années le 1er prix de satisfaction clientèle qui récompense le concessionnaire Toyota ayant assuré le meilleur service vente et après-vente pour l’ensemble de la Belgique et du Grand Duché du Luxembourg. Ce prix est le résultat des efforts entrepris par l’équipe Nachsem en matière de service et de respect de la clientèle.
+                        </p>
+                        <div class="serv">
+                            <button type="button" class=" button btn btn-dark">Voir Noir services</button>
+                        </div>
+                       
+                    </div>
+      <!-- First column -->
+      <!-- Second column -->
+                    <div class="col-lg-6 vh-50"  >
+                        <!--<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error consectetur voluptatem vel magni voluptas cupiditate ab ipsa facilis esse atque, delectus, numquam tempore maxime explicabo rem non obcaecati cumque repellat!</p>
+                        --> <img src="{{ url_for('static', filename='images/img1.png') }}" alt=""  style="margin-bottom: 50px; width:90%;height:auto; margin: 30px;border-radius: 20px;">
+                        </div>
+                      
+      <!-- Second column -->
+
+                        </div>
+            </div>
+            <div class="colum container-fluid px-0">
+                <div class="row g-0">
+
+      <!-- First column -->
+                    <div class="col-lg-6 vh-50">
+                        <!--<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error consectetur voluptatem vel magni voluptas cupiditate ab ipsa facilis esse atque, delectus, numquam tempore maxime explicabo rem non obcaecati cumque repellat!</p>
+                        --> <img src="{{ url_for('static', filename='images/img2.png') }}" alt=""style="margin-bottom: 50px; width:90%;height:auto;margin: 30px;">
+                        
+                    </div>
+                    
+      <!-- First column -->
+
+      <!-- Second column -->
+                    <div class="col-lg-6 vh-50" style="padding: 30px;">
+                        <p>Un accueil de qualité, un service après-vente efficace, rapide et flexible, une équipe de techniciens formés régulièrement, un atelier mécanique moderne ouvert 6 jours sur 7, des contrats d’entretien à prix réduits, des solutions de réparations adaptées à votre budget, une carrosserie agréée par les compagnies d’assurance, un véhicule de remplacement en cas d’immobilisation prolongée de votre véhicule sont autant d’éléments qui font de notre service plus qu’une réputation, LA référence.
+
+                        </p>
+                    </div>
+                    <br>
+      <!-- Second column -->
+
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <section id="pricing">
+            <div class=" container  py-5 my-5">
+                <h2 class=" text-center my-5">See our <span class="text-primary">pricing plan</span> </h2>
+
+                <div class="d-flex justify-content-center">
+                    <label class="pt-2" id="monthly-label">Monthly</label>
+                    <span class="form-check form-switch p-0">
+                        <input class="form-check-input mx-2" type="checkbox" role="switch" id="flexSwitchCheckChecked"
+                            checked>
+                        <label class="pt-2" id="yearly-label" for="flexSwitchCheckChecked">Yearly</label>
+                    </span>
+                </div>
+
+
+                <div class="row py-4">
+                    <div class="  col-lg-3 col-sm-6 col-12 pb-4">
+                        <div class=" pricing-lable pt-5 ">
+                            <div class="pt-3 ps-2">
+                                <h3>Save by choosing our best plan</h3>
+                                <p>Choose our best plan to save a lot.</p>
+                            </div>
+
+                            <iconify-icon class="pricing-lable-icon "
+                                icon="fluent:vehicle-car-profile-ltr-20-regular"></iconify-icon>
+
+
+                        </div>
+                    </div>
+
+                    <div class=" col-lg-3 col-sm-6 col-12 pb-4">
+                        <div class=" pricing-detail py-5  text-center">
+                            <div class="pricing-content">
+                                <h5>Essential</h5>
+
+                                <div class="content monthly pt-2">
+                                    <h3>$29.50</h3>
+                                </div>
+                                <div class="content yearly pt-2">
+                                    <h3>$350.70</h3>
+                                </div>
+
+                                <div class="pt-4">
+                                    <p>✓ Quisque rhoncus</p>
+                                    <p>✓ Lorem ipsum dolor</p>
+                                    <p>✓ Vivamus velit mir</p>
+                                    <p>✓ Velit mir</p>
+                                    <p>✓ Elit mir ivamus</p>
+                                </div>
+
+                            </div>
+
+                            <div class="pricing-button">
+                                <button class="btn btn-primary">Choose Plan </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class=" col-lg-3 col-sm-6 col-12 pb-4">
+                        <div class=" pricing-detail py-5  text-center">
+                            <div class="pricing-content">
+                                <h5 class="price-recommend">Recommended</h5>
+                                <div class="content monthly pt-2">
+                                    <h3>$44.40</h3>
+                                </div>
+                                <div class="content yearly pt-2">
+                                    <h3>$530.60</h3>
+                                </div>
+
+                                <div class="pt-4">
+                                    <p>✓ Quisque rhoncus</p>
+                                    <p>✓ Lorem ipsum dolor</p>
+                                    <p>✓ Vivamus velit mir</p>
+                                    <p>✓ Elit mir ivamus</p>
+                                    <p>✓ Lorem ipsum dolor</p>
+                                    <p>✓ Ipsum dolor</p>
+                                </div>
+
+                            </div>
+
+                            <div class="pricing-button">
+                                <button class="btn btn-primary active">Choose Plan </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class=" col-lg-3 col-sm-6 col-12 pb-4">
+                        <div class=" pricing-detail py-5  text-center">
+                            <div class="pricing-content">
+                                <h5>Pro</h5>
+                                <div class="content monthly pt-2">
+                                    <h3>$70.50</h3>
+                                </div>
+                                <div class="content yearly pt-2">
+                                    <h3>$840.30</h3>
+                                </div>
+
+                                <div class="pt-4">
+                                    <p>✓ Quisque rhoncus</p>
+                                    <p>✓ Lorem ipsum dolor</p>
+                                    <p>✓ Vivamus velit mir</p>
+                                    <p>✓ Elit mir ivamus</p>
+                                    <p>✓ Ivamus mir vamus</p>
+                                    <p>✓ Quisque rhoncusr</p>
+                                    <p>✓ lit mir iamus</p>
+                                </div>
+
+                            </div>
+
+                            <div class="pricing-button">
+                                <button class="btn btn-primary">Choose Plan </button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+            </div>
+        </section>
+
+
+
+
+
+
+        <!-- Footer Section Starts -->
+        <section id="footer">
+            <div class="container footer-container mt-5">
+                <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 my-5 py-5">
+                    <div class="col-md-4 mt-5 mt-md-0">
+                        <a class="navbar-brand" href="{{ url_for('index') }}"><img class="logo" src="{{ url_for('static', filename='images/logo.png') }}"></a>
+                
+                        <div class="d-flex align-items-center mt-3 mb-3">
+                            <iconify-icon class="me-2" icon="mdi:map-marker"></iconify-icon>
+                            <span>Av. Joseph Lejeune 182, 4980 Trois-Ponts</span>
+                        </div>
+                        <div class="d-flex align-items-center mb-3">
+                            <iconify-icon class="me-2" icon="mdi:phone"></iconify-icon>
+                            <span>080 55 00 80<br>
+                                marin.motor17@gmail.com
+                                 </span>
+                        </div>
+                        <div class="d-flex align-items-center mb-3">
+                            <iconify-icon class="me-2" icon="mdi:clock"></iconify-icon>
+                            <span>Lun-Ven : 8.00 - 17:30 <br>Samedi : sur rendez-vous
+                              <br>  Dimanche : fermé</span>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <a href="#" target="_blank"><iconify-icon class="social-link-icon pe-4" icon="mdi:facebook"></iconify-icon></a>
+                            <a href="#" target="_blank"><iconify-icon class="social-link-icon pe-4" icon="mdi:twitter"></iconify-icon></a>
+                            <a href="#" target="_blank"><iconify-icon class="social-link-icon pe-4" icon="mdi:instagram"></iconify-icon></a>
+                            <a href="#" target="_blank"><iconify-icon class="social-link-icon pe-4" icon="mdi:linkedin"></iconify-icon></a>
+                            <a href="#" target="_blank"><iconify-icon class="social-link-icon pe-4" icon="mdi:youtube"></iconify-icon></a>
+                        </div>
+                    </div>
+                    <div class="col-md-7 offset-md-1 mt-5">
+                        <ul class="footer-nav list-unstyled">
+                            <li class="nav-item me-2 mb-3">
+                                <a class="nav-link px-4" aria-current="page" href="#">Accueil</a>
+                            </li>
+                            <li class="nav-item me-2 mb-3">
+                                <a class="nav-link px-4" href="#">Réservation</a>
+                            </li>
+                            <li class="nav-item me-2 mb-3">
+                                <a class="nav-link px-4" href="#">À propos</a>
+                            </li>
+                            <li class="nav-item me-2 mb-3">
+                                <a class="nav-link px-4" href="#">Voitures</a>
+                            </li>
+                            <li class="nav-item me-2 mb-3">
+                                <a class="nav-link px-4" href="#">Services</a>
+                            </li>
+                            <li class="nav-item me-2 mb-3">
+                                <a class="nav-link px-4" href="#">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </footer>
+            </div>
+            <footer class="d-flex flex-wrap justify-content-between align-items-center border-top"></footer>
+            <div class="container">
+                <footer class="d-flex flex-wrap justify-content-between align-items-center py-2 pt-4">
+                    <div class="col-md-6 d-flex align-items-center">
+                        <p>© 2024 MarinMotor - Tous droits réservés</p>
+                    </div>
+                </footer>
+            </div>
+        </section>
+        
+        <!-- Include Iconify script -->
+        <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
+        
+        
+
+
+
+
+        <!-- script ================================================== -->
+        <!-- Link jQuery -->
+    <script src="{{ url_for('static', filename='js/jquery-1.11.0.min.js') }}"></script>
+    <!-- Link other JavaScript files -->
+    <script src="{{ url_for('static', filename='js/plugins.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+            crossorigin="anonymous"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
+
+    </body>
+
+    </html>
